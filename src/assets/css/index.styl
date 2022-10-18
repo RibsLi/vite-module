@@ -1,0 +1,44 @@
+// 清除标签默认样式
+*
+  margin 0
+  padding 0
+
+img
+  vertical-align middle
+  border none
+  display inline-block
+
+ul, ol, li
+  list-style none
+
+input, select, textarea
+  border none
+  outline none
+  background none
+  overflow-y hidden
+
+a, a:link, a:visited, a:active, a:hover
+  text-decoration none
+
+// 文字单行溢出隐藏显示省略号
+.txt-ell-one
+  overflow hidden
+  white-space nowrap
+  text-overflow ellipsis
+
+// 文字多行溢出隐藏
+.txt-ell-two
+  overflow hidden
+  text-overflow ellipsis
+  display -webkit-box
+  -webkit-line-clamp 2
+  -webkit-box-orient vertical
+
+// 隐藏滚动条
+.overflow-scrollbar
+  overflow auto
+  line-height 25px
+  scrollbar-width none
+  -ms-overflow-style none
+  &::-webkit-scrollbar
+    display none

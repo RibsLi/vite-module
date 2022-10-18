@@ -1,0 +1,73 @@
+{
+  "name": "shop-template",
+  "private": true,
+  "version": "1.1.3",
+  "author": "",
+  "scripts": {
+    "dev:host": "vite --host 0.0.0.0",
+    "dev": "vite --port 8888",
+    "build": "vite build",
+    "build:prod": "vite build --mode prod",
+    "build:dev": "vite build --mode dev",
+    "preview": "vite preview",
+    "lint:style": "stylelint --custom-syntax stylelint-plugin-stylus/custom-syntax src/**/*.{vue,css,styl}",
+    "lint:script": "eslint --ext .js,.vue src --fix",
+    "format": "prettier --write src"
+  },
+  "dependencies": {
+    "element-plus": "^2.2.18",
+    "pinia": "^2.0.12",
+    "qs": "^6.10.5",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.20.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "eslint-plugin-vue-pug": "^0.5.4",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "pug": "^3.0.2",
+    "pug-lint": "^2.6.0",
+    "pug-lint-config-clock": "^2.0.0",
+    "pug-lint-vue": "^0.4.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-recommended": "^8.0.0",
+    "stylelint-plugin-stylus": "^0.16.1",
+    "stylus": "^0.56.0",
+    "stylus-loader": "^7.1.0",
+    "unocss": "^0.45.29",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.8",
+    "vite": "^2.8.0",
+    "vite-plugin-style-import": "^1.4.1"
+  },
+  "lint-staged": {
+    "*.{js,vue,json,md}": [
+      "prettier --write"
+    ],
+    "src/**/*.{js,vue}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{vue,css,styl}": [
+      "stylelint --custom-syntax stylelint-plugin-stylus/custom-syntax --fix"
+    ]
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "vite": "2"
+      },
+      "ignoreMissing": [
+        "vue-eslint-parser",
+        "@types/react",
+        "react",
+        "react-dom"
+      ]
+    }
+  }
+}
